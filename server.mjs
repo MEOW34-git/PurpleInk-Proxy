@@ -10,6 +10,8 @@ import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 
 const workspacePath = fileURLToPath(new URL("./", import.meta.url));
 const mainPage = await readFile(new URL("./main.html", import.meta.url));
+const appsPage = await readFile(new URL("./apps.html", import.meta.url));
+const favicon = await readFile(new URL("./favicon.ico", import.meta.url));
 const serviceWorker = await readFile(new URL("./sw.js", import.meta.url));
 
 logging.set_level(logging.NONE);
@@ -36,6 +38,8 @@ const app = Fastify({
 
 app.get("/", async (_request, reply) => reply.type("text/html; charset=utf-8").send(mainPage));
 app.get("/main.html", async (_request, reply) => reply.type("text/html; charset=utf-8").send(mainPage));
+app.get("/apps.html", async (_request, reply) => reply.type("text/html; charset=utf-8").send(appsPage));
+app.get("/favicon.ico", async (_request, reply) => reply.type("image/x-icon").send(favicon));
 app.get("/sw.js", async (_request, reply) => reply.type("application/javascript").send(serviceWorker));
 
 app.register(fastifyStatic, { root: scramjetPath, prefix: "/scram/", decorateReply: false });

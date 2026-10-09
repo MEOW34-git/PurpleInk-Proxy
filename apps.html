@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#10131d">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<title>Apps | Blittio Browse</title>
+	<style>
+		:root{color-scheme:dark;--bg:#10131d;--panel:#191e2b;--text:#f3f5fb;--muted:#929caf;--line:#2b3345;--accent:#9b8cff}
+		*{box-sizing:border-box}
+		body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+		header{height:66px;padding:0 24px;display:flex;align-items:center;border-bottom:1px solid var(--line);background:#141824}
+		.brand{color:var(--text);font-weight:750;font-size:18px;text-decoration:none}
+		main{width:min(680px,100%);margin:0 auto;padding:64px 22px}
+		h1{margin:0;font-size:34px;line-height:1.2}
+		.intro{margin:10px 0 28px;color:var(--muted)}
+		ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}
+		li{border-bottom:1px solid var(--line)}
+		li a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:17px 4px;color:var(--text);text-decoration:none}
+		li a:hover .name{color:var(--accent)}
+		.name{font-weight:650}
+		.url{display:block;color:var(--muted);font-size:13px}
+		.arrow{color:var(--muted);font-size:18px}
+		@media(max-width:600px){header{padding:0 16px}main{padding:44px 18px}h1{font-size:30px}}
+	</style>
+</head>
+<body>
+	<header><a class="brand" href="/">Blittio Browse</a></header>
+	<main>
+		<h1>Apps</h1>
+		<p class="intro">Open a site in a new tab.</p>
+		<ul>
+			<li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><span><span class="name">YouTube</span><span class="url">youtube.com</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+			<li><a href="https://discord.com/login" target="_blank" rel="noopener noreferrer"><span><span class="name">Discord</span><span class="url">discord.com/login</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+			<li><a href="https://www.crazygames.com/" target="_blank" rel="noopener noreferrer"><span><span class="name">CrazyGames</span><span class="url">crazygames.com</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+			<li><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer"><span><span class="name">TikTok</span><span class="url">tiktok.com</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+			<li><a href="https://canary.discord.com" target="_blank" rel="noopener noreferrer"><span><span class="name">Discord Canary</span><span class="url">canary.discord.com</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+		</ul>
+	</main>
+</body>
+</html>

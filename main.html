@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#10131d">
-	<title>Blittio Browse</title>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<title>Wikipedia</title>
 	<style>
 		:root{color-scheme:dark;--bg:#10131d;--panel:#191e2b;--panel2:#222939;--text:#f3f5fb;--muted:#929caf;--accent:#9b8cff;--line:#2b3345}
 		*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
@@ -19,7 +20,7 @@
 <body>
 	<div class="app">
 		<header class="topbar">
-			<div class="brand"><div class="logo">B</div>Blittio Browse <small>Private web, your way</small></div>
+			<div class="brand"><div class="logo">P</div>PurpleInk Proxy <small>Private web, your way</small></div>
 			<div class="top-actions"><button class="icon-btn" id="homeBtn" aria-label="Home" title="Home">⌂</button><button class="icon-btn" id="reloadBtn" aria-label="Reload" title="Reload">↻</button></div>
 		</header>
 		<form class="toolbar" id="addressForm">
@@ -30,14 +31,14 @@
 		</form>
 		<main>
 			<section class="welcome" id="welcome">
-				<div class="hero-mark">B</div><h1>A little more room to browse.</h1><p>Search the web or enter a website address to get started with Blittio Browse.</p>
+				<div class="hero-mark">P</div><h1>Browse. (but just don=t get caught by ur admin)</h1><p>PurpleInk Proxy allows you to go to your favourite websites, all by me, MEOW.</p>
 				<form class="search" id="searchForm"><input id="searchInput" placeholder="What would you like to find?" aria-label="Search the web"><button type="submit">Search</button></form>
-				<div class="hint">Enter a web address, or search with DuckDuckGo</div>
-				<div class="quick-links" aria-label="Quick links"><button data-url="https://www.wikipedia.org">Wikipedia</button><button data-url="https://www.archive.org">Internet Archive</button><button data-url="https://developer.mozilla.org">MDN</button></div>
+				<div class="hint">Go to your favourite websites without getting caught.</div>
+				<div class="quick-links" aria-label="Quick links"><button data-url="https://www.wikipedia.org">Wikipedia</button><button data-url="https://www.archive.org">Internet Archive</button><button data-url="https://developer.mozilla.org">MDN</button><a href="/apps.html">Apps</a></div>
 			</section>
-			<section class="browser" id="browser" aria-label="Browser view"><iframe id="view" title="Web page"></iframe><div class="status" id="status">Loading through Blittio</div></section>
+			<section class="browser" id="browser" aria-label="Browser view"><iframe id="view" title="Web page"></iframe><div class="status" id="status">Loading through PurpleInk</div></section>
 		</main>
-		<footer class="foot">Blittio Browse · Pages are provided by the websites you visit.</footer>
+		<footer class="foot">PurpleInk Proxy - Made by MEOW.</footer>
 	</div>
 	<script src="/scram/scramjet.all.js"></script>
 	<script src="/baremux/index.js"></script>
