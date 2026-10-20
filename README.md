@@ -1,9 +1,6 @@
 # PurpleInk Proxy
 
-Start the browser with `npm start`. Regular websites use the built-in Wisp proxy.
-
-To browse `.onion` links, run a Tor daemon on the same host as this app and make
-its SOCKS5 listener available at `127.0.0.1:9050` (the default). For a different
-listener, set `TOR_SOCKS_HOST` and `TOR_SOCKS_PORT` before starting the app.
-Onion traffic is sent through that SOCKS5 listener; ordinary web traffic keeps
-using the direct Wisp connection.
+This is PurpleInk Proxy, a in-browser web application to browse the web freely.
+For deploy in Github Codespaces, use ¨npm start¨ to start a server.
+To create multiple servers at once, use PORT=<port number between 1000 and 9999>.
+Have fun brwosing the web!
