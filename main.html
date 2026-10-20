@@ -93,7 +93,9 @@
 			welcome.style.display = "none";
 			browser.style.display = "flex";
 			status.style.display = "block";
-			status.textContent = "Loading through Blittio";
+			status.textContent = parsed.hostname.toLowerCase().endsWith(".onion")
+				? "Connecting to the onion site through Tor…"
+				: "Loading through Blittio";
 			try {
 				await prepareProxy();
 				proxyFrame.go(target);
@@ -107,7 +109,11 @@
 			const target = normalizeInput(address.value);
 			try {
 				const parsed = new URL(target);
-				if (parsed.protocol === "https:" || parsed.protocol === "http:") window.open(target, "_blank", "noopener,noreferrer");
+				if (parsed.hostname.toLowerCase().endsWith(".onion")) {
+					status.textContent = "Onion sites must be opened inside this Tor-enabled browser";
+				} else if (parsed.protocol === "https:" || parsed.protocol === "http:") {
+					window.open(target, "_blank", "noopener,noreferrer");
+				}
 			} catch { status.textContent = "That address could not be opened"; }
 		});
 		document.getElementById("searchForm").addEventListener("submit", e => { e.preventDefault(); navigate(searchInput.value); });

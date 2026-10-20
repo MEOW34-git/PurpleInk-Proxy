@@ -7,6 +7,7 @@ import { server as wisp, logging } from "@mercuryworkshop/wisp-js/server";
 import { scramjetPath } from "@mercuryworkshop/scramjet/path";
 import { libcurlPath } from "@mercuryworkshop/libcurl-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
+import { TorAwareTCPSocket } from "./tor-tcp-socket.mjs";
 
 const workspacePath = fileURLToPath(new URL("./", import.meta.url));
 const mainPage = await readFile(new URL("./main.html", import.meta.url));
@@ -29,7 +30,7 @@ const app = Fastify({
 		})
 		.on("upgrade", (request, socket, head) => {
 			if (request.url?.endsWith("/wisp/")) {
-				wisp.routeRequest(request, socket, head);
+				wisp.routeRequest(request, socket, head, { TCPSocket: TorAwareTCPSocket });
 			} else {
 				socket.destroy();
 			}
